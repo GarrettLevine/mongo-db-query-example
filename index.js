@@ -15,6 +15,23 @@ const productSchema = mongoose.Schema({
   sales_tax: Boolean,
   term_years: Number,
   cancel_penalty: Number,
+  limits: {
+    voice: {
+      units: String,
+      n: Number,
+      over_rate: Number,
+    },
+  },
+  data: {
+    units: String,
+    n: Number,
+    over_rate: Number,
+  },
+  sms: {
+    units: String,
+    n: Number,
+    over_rate: Number,
+  },
 });
 const Product = mongoose.model('Product', productSchema);
 
