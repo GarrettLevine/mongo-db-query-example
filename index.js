@@ -13,7 +13,7 @@ mongoose
   )
   .then(async () => {
     await populateDB();
-    const products = await Product.find().populate('services accessories');
+    const products = await Product.find();
     console.log(products);
   })
   .catch((err) => console.log(err));
