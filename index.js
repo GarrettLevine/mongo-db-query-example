@@ -32,6 +32,13 @@ const productSchema = mongoose.Schema({
     n: Number,
     over_rate: Number,
   },
+  additional_tarrifs: [{
+    kind: String,
+    amount: {
+      dollar: Number,
+      percent_of_service: Number,
+    }
+  }]
 });
 const Product = mongoose.model('Product', productSchema);
 
