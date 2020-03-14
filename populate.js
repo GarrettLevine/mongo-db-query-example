@@ -36,6 +36,6 @@ async function cleanup(...cols) {
     if(count > 0) {
       return col.drop();
     }
-  })
+  });
   return Promise.all(promises);
 }
