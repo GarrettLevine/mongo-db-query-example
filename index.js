@@ -27,7 +27,9 @@ mongoose
   )
   .then(async () => {
     await populateDB();
-    const products = await Product.find();
+    const products = await Product.find({ $or: [
+      {name: { $regex: "Phone"} },
+    ] });
     console.log(products);
   })
   .catch((err) => console.log(err));
